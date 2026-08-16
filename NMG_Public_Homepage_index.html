@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nathan Music Group — NMG</title>
+<meta name="description" content="Nathan Music Group — independent music label.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#070708;--surface:#101012;--surface2:#17171a;--text:#f5f5f3;--muted:#a1a1a8;--lime:#d6ff38;--pink:#ff4f91;--line:#2a2a2e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}a{color:inherit;text-decoration:none}
+header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(7,7,8,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:78px;max-width:1180px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:900;letter-spacing:.12em}.brand img{width:38px;height:38px;border-radius:9px;object-fit:cover}.navlinks{display:flex;gap:28px;font-size:13px;font-weight:700;color:#bbb}.navlinks a:hover{color:#fff}.contact{border:1px solid #3a3a3e;border-radius:999px;padding:11px 16px}
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:linear-gradient(180deg,transparent 50%,#070708 100%),radial-gradient(circle at 70% 35%,#343c1c,transparent 28%)}
+.hero:before{content:"";position:absolute;inset:0;background:url("nmg.jpg") center/cover no-repeat;opacity:.24;filter:saturate(.65);transform:scale(1.04)}
+.hero-inner{position:relative;z-index:1;max-width:1180px;width:100%;margin:auto;padding:160px 28px 100px}.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--lime);font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(58px,10vw,145px);line-height:.82;letter-spacing:-.075em;margin:22px 0;max-width:900px}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px #fff}.hero p{max-width:560px;color:#c2c2c6;font-size:18px;line-height:1.7}.hero-actions{display:flex;gap:12px;margin-top:30px}.btn{padding:14px 20px;border-radius:999px;font-weight:800;font-size:13px}.primary{background:var(--lime);color:#080808}.secondary{border:1px solid #4a4a4e;background:#0d0d0f}
+.section{padding:110px 0;border-top:1px solid var(--line)}.wrap{max-width:1180px;margin:auto;padding:0 28px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:38px}.kicker{font-size:11px;letter-spacing:.18em;color:var(--lime);font-weight:800;text-transform:uppercase}.section h2{font-size:clamp(42px,6vw,78px);letter-spacing:-.06em;margin:10px 0 0;line-height:.9}.section-head p{max-width:380px;color:var(--muted);line-height:1.6}
+.artist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.artist{position:relative;min-height:510px;border-radius:24px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}.artist img,.artist .placeholder{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.artist img{filter:saturate(.85)}.artist:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.92))}.artist-info{position:absolute;z-index:2;left:26px;right:26px;bottom:25px}.artist-info .num{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.14em}.artist-info h3{font-size:40px;letter-spacing:-.04em;margin:8px 0}.artist-info p{color:#c7c7ca;margin:0;max-width:440px;line-height:1.55}.placeholder{display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,#28282d,#101012);font-size:110px;font-weight:900;color:#303036}.artist:nth-child(4) .placeholder{background:radial-gradient(circle at 50% 30%,#321a2a,#101012)}
+.release-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.release{padding:25px;background:var(--surface);border:1px solid var(--line);border-radius:20px}.release small{color:var(--lime);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.release h3{font-size:24px;margin:13px 0 5px}.release p{color:var(--muted);margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:24px}.about p{font-size:20px;line-height:1.7;color:#c4c4c8}
+.portal{background:#0c0c0f}.portal-card{border:1px solid #36363b;border-radius:24px;padding:38px;background:linear-gradient(135deg,#15151a,#0e0e10)}.portal-card h3{font-size:30px;margin:0 0 10px}.portal-card p{color:var(--muted);line-height:1.7;max-width:680px}.portal-note{display:inline-flex;gap:8px;align-items:center;color:var(--lime);font-size:12px;font-weight:800;margin-top:12px}
+footer{padding:35px 0;color:#707076;font-size:12px;border-top:1px solid var(--line)}
+@media(max-width:800px){.navlinks{display:none}.artist-grid,.about{grid-template-columns:1fr}.release-grid{grid-template-columns:1fr}.artist{min-height:430px}.hero h1{font-size:65px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="#home"><img src="nmg-logo.jpg" alt="NMG"><span>NATHAN MUSIC GROUP</span></a>
+<div class="navlinks"><a href="#artists">ARTISTS</a><a href="#releases">RELEASES</a><a href="#about">ABOUT</a><a class="contact" href="#contact">CONTACT</a></div>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="eyebrow">Independent Music Label</div>
+<h1>NATHAN <span>MUSIC GROUP.</span></h1>
+<p>Electro house, electro rap and left-field sounds. Built for artists with something different to say.</p>
+<div class="hero-actions"><a class="btn primary" href="#artists">MEET THE ARTISTS</a><a class="btn secondary" href="#releases">EXPLORE RELEASES</a></div>
+</div></section>
+
+<section class="section" id="artists"><div class="wrap">
+<div class="section-head"><div><div class="kicker">01 / ROSTER</div><h2>ARTISTS</h2></div><p>Profiles for the NMG roster. Photos, bios, releases and links can be managed through the private collaborator portal.</p></div>
+<div class="artist-grid">
+<article class="artist"><img src="nina.jpg" alt="Nina"><div class="artist-info"><div class="num">NMG / 001</div><h3>Nina</h3><p>Vocalist & songwriter.</p></div></article>
+<article class="artist"><img src="nmg.jpg" alt="NMG"><div class="artist-info"><div class="num">NMG / 002</div><h3>NMG</h3><p>Producer & songwriter. Blending storytelling, vibes and rhymes.</p></div></article>
+<article class="artist"><div class="placeholder">NW</div><div class="artist-info"><div class="num">NMG / 003</div><h3>Nathan Wunna</h3><p>Artist profile ready for authorised collaborator details and photography.</p></div></article>
+<article class="artist"><div class="placeholder">C</div><div class="artist-info"><div class="num">NMG / 004</div><h3>Carmén</h3><p>Artist profile ready for authorised collaborator details and photography.</p></div></article>
+</div></div></section>
+
+<section class="section" id="releases"><div class="wrap">
+<div class="section-head"><div><div class="kicker">02 / MUSIC</div><h2>RELEASES</h2></div><p>New releases and catalogue entries can be added by authorised collaborators without changing the public design.</p></div>
+<div class="release-grid">
+<div class="release"><small>Single / Nina</small><h3>Can't Reach You</h3><p>Nina</p></div>
+<div class="release"><small>Single / Nina</small><h3>First Feeling</h3><p>Nina</p></div>
+<div class="release"><small>Single / Nina</small><h3>Drunk Plans</h3><p>Nina</p></div>
+</div></div></section>
+
+<section class="section" id="about"><div class="wrap about"><img src="nmg.jpg" alt="Nathan Music Group"><div><div class="kicker">03 / NMG</div><h2>MAKE<br>NOISE.</h2><p>Nathan Music Group is an independent home for electro house, electro rap and left-field sounds. Built for artists with something different to say.</p></div></div></section>
+
+<section class="section portal" id="contact"><div class="wrap">
+<div class="kicker">04 / MANAGEMENT</div><h2>COLLABORATOR<br>PORTAL.</h2><div class="portal-card"><h3>Private artist management</h3><p>Authorised NMG collaborators will be able to sign in to manage artist profiles, update photos, add bios and links, and publish releases. Public visitors only see the finished website.</p><div class="portal-note">● COLLABORATOR ACCESS ONLY</div></div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Nathan Music Group (NMG) — All rights reserved.</div></footer>
+</body></html>
